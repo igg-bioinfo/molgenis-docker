@@ -35,6 +35,8 @@ services:
     depends_on:
       - postgres
       - elasticsearch
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   postgres:
     image: postgres:11-alpine
